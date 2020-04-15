@@ -1,0 +1,24 @@
+<div class="game-container">
+  <div class="game-message"></div>
+  <pre></pre>
+  <div class="game-board">
+    <div class="game-board-row">
+      <div class="game-board-space" (click)="TurnPlay(0,0)"><span *ngIf="matrix[0][0] == 1">X</span> <span *ngIf="matrix[0][0] == 2">O</span></div>
+      <div class="game-board-space" (click)="TurnPlay(0,1)"><span *ngIf="matrix[0][1] == 1">X</span> <span *ngIf="matrix[0][1] == 2">O</span></div>
+      <div class="game-board-space" (click)="TurnPlay(0,2)"><span *ngIf="matrix[0][2] == 1">X</span> <span *ngIf="matrix[0][2] == 2">O</span></div>
+    </div>
+    <div class="game-board-row">
+      <div class="game-board-space" (click)="TurnPlay(1,0)"><span *ngIf="matrix[1][0] == 1">X</span> <span *ngIf="matrix[1][0] == 2">O</span></div>
+      <div class="game-board-space" (click)="TurnPlay(1,1)"><span *ngIf="matrix[1][1] == 1">X</span> <span *ngIf="matrix[1][1] == 2">O</span></div>
+      <div class="game-board-space" (click)="TurnPlay(1,2)"><span *ngIf="matrix[1][2] == 1">X</span> <span *ngIf="matrix[1][2] == 2">O</span></div>
+    </div>
+    <div class="game-board-row">
+      <div class="game-board-space" (click)="TurnPlay(2,0)"><span *ngIf="matrix[2][0] == 1">X</span> <span *ngIf="matrix[2][0] == 2">O</span></div>
+      <div class="game-board-space" (click)="TurnPlay(2,1)"><span *ngIf="matrix[2][1] == 1">X</span> <span *ngIf="matrix[2][1] == 2">O</span></div>
+      <div class="game-board-space" (click)="TurnPlay(2,2)"><span *ngIf="matrix[2][2] == 1">X</span> <span *ngIf="matrix[2][2] == 2">O</span></div>
+    </div>
+    <h1 *ngIf="winner == 'X'">El ganador es: X</h1>
+    <h1 *ngIf="winner == 'O'">El ganador es: O</h1>
+    <button (click)="Restart()">Reiniciar</button>
+  </div>
+</div>
